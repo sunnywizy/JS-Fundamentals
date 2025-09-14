@@ -36,3 +36,5 @@ if (isNaN(size)) {
     // After the inner loop has finished building the full row, we print it to the console.
     // This creates one complete line of the square.
     console.log(row);
+  }
+}
