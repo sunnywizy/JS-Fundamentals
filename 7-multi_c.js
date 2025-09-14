@@ -8,18 +8,20 @@ const process = require('process');
 const firstArg = process.argv[2];
 
 // This line attempts to convert the text from `firstArg` into a whole number.
-// If the text cannot be converted into a number (like "hello"), this command
-// will result in a special value called NaN, which stands for "Not a Number".
+// If the text cannot be converted to a number, this command will result in a
+// special value called NaN, which stands for "Not a Number".
 const num = parseInt(firstArg);
 
 // This is our main decision-making step. We are asking a question:
 // "Is the value of `num` the special value NaN?"
 if (isNaN(num)) {
-  // If the answer is YES (it's NaN), we print this message and stop.
+  // If the answer is YES (it's NaN), we print this message.
   console.log("Missing number of occurrences");
 } else {
   // If the answer to the question is NO (it's a valid number), we run this code.
+  
   // We start with an empty variable that will hold our final output string.
+  // The `let` keyword is used because we will be changing its value inside the loop.
   let output = "";
 
   // This is a for loop. It's designed to repeat a task a specific number of times.
